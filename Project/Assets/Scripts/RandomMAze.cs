@@ -8,7 +8,7 @@ public class RandomMAze : MonoBehaviour
     private int index;
     private int touch;
 
-    private float maxTouch;
+    private int maxTouch;
 
     //public GameObject[] allMaze;
     //private GameObject currentMaze;
@@ -29,17 +29,19 @@ public class RandomMAze : MonoBehaviour
 
     private void Update()
     {
-        if(Vector3.Distance(target.transform.position, agent.transform.position) <= 1.5f && touch < maxTouch)
+        if(Vector3.Distance(target.transform.localPosition, agent.transform.localPosition) <= 1.5f && touch < maxTouch)
         {
             Move();
         }
+        //print(Vector3.Distance(target.transform.localPosition, agent.transform.localPosition));
+
     }
 
     //move target a new position 
     public void Move()
     {
         pos = posObjec.transform.GetChild(touch).transform;
-        target.transform.position = pos.position;
+        target.transform.localPosition = pos.localPosition;
         touch++;
     }
 
@@ -55,4 +57,15 @@ public class RandomMAze : MonoBehaviour
         posObjec = allPositions[index];
         ResetTarget(); 
     }
+
+    //formato alets
+    public int MaxTouch 
+    {
+        get { return maxTouch; }
+
+        //set { maxTouch = value; } 
+    }
+
+    //formato mamon
+    public int Touch { get { return touch; } set { Touch = value; } }
 }

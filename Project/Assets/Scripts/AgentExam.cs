@@ -4,53 +4,39 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
-public class MazeAgent : Agent
+public class AgentExam : Agent
 {
-    private Transform target;
+    [SerializeField] private Transform target;
     [SerializeField] private float agentSpeed;
-    //[SerializeField] private float jumpForce;
     [SerializeField] private float jumpHeight;
     [SerializeField] private float initialRewardTarget;
     [SerializeField] private LayerMask ground;
-    [SerializeField] private RandomMAze mazeTarget;
+    [SerializeField] private Collider groundStart;
+
+    [SerializeField] private ManagerGoals managerGoals;
     private MeshRenderer meshRender;
-    //[SerializeField] private Transform[] positions;
-    //private PosicionarTarget posTarget;
     private Rigidbody rb;
     private float rewardTarget;
 
-   // private bool touchTarget;
-
     void Start()
     {
-        //touchTarget = false;
         rb = GetComponent<Rigidbody>();
         meshRender = GetComponent<MeshRenderer>();
         meshRender.material.color = Color.green;
-
-        //posTarget = target.GetComponent<PosicionarTarget>();
-        //rewardTarget = initialRewardTarget;
+        target = managerGoals.goals[managerGoals.index];
 
     }
 
     public override void OnEpisodeBegin()
     {
         rewardTarget = initialRewardTarget;
-        //print(rb);
         rb.velocity = rb.angularVelocity = Vector3.zero;
+        //transform.localPosition = Vector3.up * 0.5f;
+        float randX = Random.Range(groundStart.bounds.min.x, groundStart.bounds.max.x);
+        float randZ = Random.Range(groundStart.bounds.min.z, groundStart.bounds.max.z);
+        //ClampMagnitude()
 
-
-        /*
-        if (touchTarget)
-        {
-            posTarget.ResetPosition();
-
-        }
-        */
-        //Reacomdar el target por cada iteracion
-        //Darle una de las posciones predeterminadas en una forma random
-        // transform.localPosition = positions[Random.Range(0, positions.Length)].localPosition;
-        //touchTarget = false;
+        transform.localPosition = new Vector3(randX, 0.5f, randZ);
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -63,11 +49,12 @@ public class MazeAgent : Agent
         sensor.AddObservation(rb.velocity.x);
         sensor.AddObservation(rb.velocity.y);
         sensor.AddObservation(rb.velocity.z);
-
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
+
+
         //config of two actions
         Vector3 actuatorDir = Vector3.zero;
 
@@ -75,11 +62,12 @@ public class MazeAgent : Agent
         actuatorDir.z = agentSpeed * actions.ContinuousActions[1];
         actuatorDir.y = actions.ContinuousActions[2];
 
+        rb.AddForce(actuatorDir);
+
         //si NOOO esta en el piso 
         if (!Physics.Raycast(transform.localPosition, Vector3.down, 0.51f, ground))
         {
             actuatorDir.y = 0f;
-
         }
         else
         {
@@ -87,74 +75,58 @@ public class MazeAgent : Agent
             rb.AddForce(actuatorDir.y * Vector3.up, ForceMode.Impulse); //fuerza tomando en cuenta la masa y un soli impilso
             actuatorDir.y = rb.velocity.y; //deja su actual
         }
-
-        //Add speed
-        //print(actuatorDir);
-        //rb.AddForce(actuatorDir); 
-        rb.velocity = actuatorDir;
-
-        //politicas o recompensas
-        float targetDistance = Vector3.Distance(transform.localPosition, target.localPosition);
-
-        //POLICY: Reach target
-        if (targetDistance <= 1.5f)
-        {
-            if(mazeTarget.Touch < mazeTarget.MaxTouch)
-                SetReward(rewardTarget);
-
-            else
-            {
-                mazeTarget.RestarAll();
-                SetReward(4f);
-                EndEpisode();
-            }
-
-            //touchTarget = true;
-            //rewardTarget *= 2f; no fue buen idea
-            //EndEpisode();
-        }
-
+      
         //POLICY: The agents falls off the platform
-        else if (transform.localPosition.y < 0f)
+        if (transform.localPosition.y < 0f)
         {
             SetReward(-5.0f);
+           
+
             //mazeTarget.ResetTarget();
             EndEpisode();
         }
 
-        //POLICY: Time punishment
-        //SetReward(-0.005f);
+
+        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*if(collision.gameObject.CompareTag("Target"))
+        
+        if (collision.gameObject.CompareTag("Peligro"))
         {
-            mazeTarget.RestarAll();
+            SetReward(-1f);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Target"))
+        {
+            //mazeTarget.RestarAll();
+            managerGoals.index++;
+            target = managerGoals.goals[managerGoals.index];
+            other.gameObject.SetActive(false);
             SetReward(4f);
+        }
+        if (other.CompareTag("Finish"))
+        {
+            SetReward(20f);
+            managerGoals.ResetGoals();
             EndEpisode();
-        }*/
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            SetReward(-0.08f);
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    public static Vector3 ClampMagnitude(Vector3 _vectorToClamp, float minMagnitude)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        float vecMagnitude = _vectorToClamp.magnitude;
+        if (vecMagnitude < minMagnitude)
         {
-            SetReward(0.005f);
-            meshRender.material.color = Color.green;
+            Vector3 vecNormalized = _vectorToClamp / vecMagnitude; //equivalent to _vectorToClamp.normalized, but slightly faster in this case
+            return vecNormalized * minMagnitude;
         }
-    }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            SetReward(-0.02f);
-            meshRender.material.color = Color.red;
-        }
+        // No need to clamp at all
+        return _vectorToClamp;
     }
 }
