@@ -2,22 +2,22 @@
     "Hunter": {
         "checkpoints": [
             {
-                "steps": 127253,
-                "file_path": "results\\ExamV1\\Hunter\\Hunter-127253.onnx",
+                "steps": 11948,
+                "file_path": "results\\ExamV1.2\\Hunter\\Hunter-11948.onnx",
                 "reward": null,
-                "creation_time": 1635460918.5318856,
+                "creation_time": 1635477575.8652158,
                 "auxillary_file_paths": [
-                    "results\\ExamV1\\Hunter\\Hunter-127253.pt"
+                    "results\\ExamV1.2\\Hunter\\Hunter-11948.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 127253,
-            "file_path": "results\\ExamV1\\Hunter.onnx",
+            "steps": 11948,
+            "file_path": "results\\ExamV1.2\\Hunter.onnx",
             "reward": null,
-            "creation_time": 1635460918.5318856,
+            "creation_time": 1635477575.8652158,
             "auxillary_file_paths": [
-                "results\\ExamV1\\Hunter\\Hunter-127253.pt"
+                "results\\ExamV1.2\\Hunter\\Hunter-11948.pt"
             ]
         }
     },
