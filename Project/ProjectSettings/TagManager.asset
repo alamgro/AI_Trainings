@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Peligro
   - Suelo
+  - Robot
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Player
   - Target
-  - 
+  - Robot
   - 
   - 
   - 

@@ -17,6 +17,7 @@ public class AgentExam : Agent
     [SerializeField] private ManagerGoals managerGoals;
     private MeshRenderer meshRender;
     private Rigidbody rb;
+    //[SerializeField] private MoveBridge bridge;
     //private float rewardTarget;
 
     void Start()
@@ -30,6 +31,7 @@ public class AgentExam : Agent
 
     public override void OnEpisodeBegin()
     {
+        //bridge.MovePlane();
         //rewardTarget = initialRewardTarget;
         rb.velocity = rb.angularVelocity = Vector3.zero;
         //transform.localPosition = Vector3.up * 0.5f;
@@ -93,7 +95,7 @@ public class AgentExam : Agent
         
         if (collision.gameObject.CompareTag("Peligro"))
         {
-            SetReward(-1f);
+            SetReward(-5f);
         }
     }
 
