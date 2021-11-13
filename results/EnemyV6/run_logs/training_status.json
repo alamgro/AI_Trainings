@@ -1,0 +1,29 @@
+{
+    "Hunter": {
+        "checkpoints": [
+            {
+                "steps": 305792,
+                "file_path": "results\\EnemyV6\\Hunter\\Hunter-305792.onnx",
+                "reward": null,
+                "creation_time": 1636760036.4955728,
+                "auxillary_file_paths": [
+                    "results\\EnemyV6\\Hunter\\Hunter-305792.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 305792,
+            "file_path": "results\\EnemyV6\\Hunter.onnx",
+            "reward": null,
+            "creation_time": 1636760036.4955728,
+            "auxillary_file_paths": [
+                "results\\EnemyV6\\Hunter\\Hunter-305792.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.9.1+cu111"
+    }
+}

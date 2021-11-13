@@ -9,6 +9,8 @@ TagManager:
   - Peligro
   - Suelo
   - Robot
+  - Ally
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Player
   - Target
   - Robot
-  - 
+  - Wall
   - 
   - 
   - 

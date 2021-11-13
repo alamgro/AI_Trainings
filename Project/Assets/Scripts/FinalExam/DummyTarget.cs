@@ -5,20 +5,20 @@ using UnityEngine;
 public class DummyTarget : MonoBehaviour
 {
     [SerializeField] private Collider respawnColl;
-    [SerializeField] private GameObject enemy;
+    //[SerializeField] private GameObject enemy;
 
     private float randX;
     private float randZ;
-    private float timer;
-    [SerializeField] private float timerToMove;
+   // private float timer;
+   // [SerializeField] private float timerToMove;
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         Move();
-    }
+    }*/
 
-    private void Update()
+    /*private void Update()
     {
         timer += Time.deltaTime;
 
@@ -27,14 +27,14 @@ public class DummyTarget : MonoBehaviour
             Move();
             timer = 0;
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.Equals(enemy))
+        /*if(collision.gameObject.Equals(enemy))
         {
             Move();
-        }
+        }*/
         if(collision.gameObject.CompareTag("Peligro"))
         {
             Move();
@@ -46,7 +46,7 @@ public class DummyTarget : MonoBehaviour
     {
         randX = Random.Range(respawnColl.bounds.min.x, respawnColl.bounds.max.x);
         randZ = Random.Range(respawnColl.bounds.min.z, respawnColl.bounds.max.z);
-        transform.position = new Vector3(randX, 0.6f, randZ);
+        transform.position = new Vector3(randX, 1f, randZ);
     }
 
 }

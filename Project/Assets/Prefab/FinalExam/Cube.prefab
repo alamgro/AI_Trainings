@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2793712505601094440}
   - component: {fileID: 8890258302106471396}
   - component: {fileID: 1230354879504621497}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
-  m_TagString: Peligro
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
