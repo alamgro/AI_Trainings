@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4468937374098939152}
   - component: {fileID: 5464903974377073876}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 6657533146699328894}
   - component: {fileID: 6657533146699328832}
   - component: {fileID: 3171725083387042363}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: AgentChiken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  agentSpeed: 5
+  agentSpeed: 6
   groundStart: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &6657533146699328889
@@ -194,12 +194,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 9
+    VectorObservationSize: 8
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 3
+      m_NumContinuousActions: 2
       BranchSizes: 
-    VectorActionSize: 03000000
+    VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
@@ -239,18 +239,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SensorName: RayPerceptionSensor
   m_DetectableTags:
-  - Wall
-  - Peligro
-  m_RaysPerDirection: 10
+  - Player
+  m_RaysPerDirection: 15
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
-  m_RayLength: 11
+  m_RayLength: 8
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 179
+    m_Bits: 1011
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 0.8679245, g: 0.8040111, b: 0, a: 1}
+  rayMissColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   m_StartVerticalOffset: 0
   m_EndVerticalOffset: 0
 --- !u!114 &3171725083387042363
@@ -268,9 +267,10 @@ MonoBehaviour:
   m_SensorName: Suelo
   m_DetectableTags:
   - Suelo
+  - Player
   m_RaysPerDirection: 5
   m_MaxRayDegrees: 180
-  m_SphereCastRadius: 0.45
+  m_SphereCastRadius: 0.5
   m_RayLength: 15
   m_RayLayerMask:
     serializedVersion: 2
@@ -278,5 +278,5 @@ MonoBehaviour:
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0.033018887, b: 0.89255804, a: 1}
   rayMissColor: {r: 0, g: 0.14285707, b: 1, a: 1}
-  m_StartVerticalOffset: 1.7
+  m_StartVerticalOffset: 1.9
   m_EndVerticalOffset: -10

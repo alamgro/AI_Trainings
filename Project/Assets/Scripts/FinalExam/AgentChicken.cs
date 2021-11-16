@@ -10,11 +10,13 @@ public class AgentChicken : Agent
     [SerializeField] private float agentSpeed;
     [SerializeField] private Collider groundStart;
     [SerializeField] private Transform player;
+    private MeshRenderer mesh;
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        mesh = GetComponent<MeshRenderer>();
     }
 
     public override void OnEpisodeBegin()
@@ -52,12 +54,26 @@ public class AgentChicken : Agent
 
         if (transform.position.y < 0f)
         {
-            SetReward(-8f);
+            SetReward(-10f);
             EndEpisode();
             //print("callo");
         }
 
-        SetReward(0.01f);
+        if(Vector3.Distance(transform.position, player.position) < 5f)
+        {
+            SetReward(0.05f);
+            mesh.material.color = Color.magenta;
+        }
+        else if(Vector3.Distance(transform.position, player.position) < 7f)
+        {
+            SetReward(0.08f);
+            mesh.material.color = Color.cyan;
+        }
+        else if (Vector3.Distance(transform.position, player.position) < 8f)
+        {
+            SetReward(0.1f);
+            mesh.material.color = Color.cyan;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -65,7 +81,9 @@ public class AgentChicken : Agent
         if (collision.gameObject.CompareTag("Player"))
         {
             SetReward(-5f);
-           // print("Collision");
+            // print("Collision");
+            mesh.material.color = Color.red;
+
         }
     }
 
@@ -73,7 +91,9 @@ public class AgentChicken : Agent
     {
         if(other.CompareTag("Player"))
         {
-            SetReward(-0.001f);
+            SetReward(-0.01f);
+            mesh.material.color = Color.black;
+
             //print("Trigger");
         }
     }

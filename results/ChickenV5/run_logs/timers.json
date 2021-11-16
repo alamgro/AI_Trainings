@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1637008892",
+        "python_version": "3.7.11 (default, Jul 27 2021, 09:42:29) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Alexander\\.conda\\envs\\WithTorch\\Scripts\\mlagents-learn --force config/Hunter.yaml --run-id=ChickenV5",
+        "mlagents_version": "0.27.0",
+        "mlagents_envs_version": "0.27.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.9.1+cu111",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1637008956"
+    },
+    "total": 64.2941118,
+    "count": 1,
+    "self": 0.008030099999984941,
+    "children": {
+        "run_training.setup": {
+            "total": 0.09457139999999997,
+            "count": 1,
+            "self": 0.09457139999999997
+        },
+        "TrainerController.start_learning": {
+            "total": 64.1915103,
+            "count": 1,
+            "self": 0.00012290000000803047,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 64.1913697,
+                    "count": 1,
+                    "self": 64.1913697
+                },
+                "TrainerController._save_models": {
+                    "total": 1.770000000078653e-05,
+                    "count": 1,
+                    "self": 1.770000000078653e-05
+                }
+            }
+        }
+    }
+}

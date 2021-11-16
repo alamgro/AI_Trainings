@@ -2,31 +2,58 @@
     "Hunter": {
         "checkpoints": [
             {
-                "steps": 499940,
-                "file_path": "results\\EnemyV8\\Hunter\\Hunter-499940.onnx",
-                "reward": null,
-                "creation_time": 1636776348.5232663,
-                "auxillary_file_paths": [
-                    "results\\EnemyV8\\Hunter\\Hunter-499940.pt"
-                ]
-            },
-            {
                 "steps": 500004,
                 "file_path": "results\\EnemyV8\\Hunter\\Hunter-500004.onnx",
                 "reward": null,
-                "creation_time": 1636776348.5862803,
+                "creation_time": 1637099030.133554,
                 "auxillary_file_paths": [
                     "results\\EnemyV8\\Hunter\\Hunter-500004.pt"
+                ]
+            },
+            {
+                "steps": 800004,
+                "file_path": "results\\EnemyV8\\Hunter\\Hunter-800004.onnx",
+                "reward": null,
+                "creation_time": 1637100565.3904388,
+                "auxillary_file_paths": [
+                    "results\\EnemyV8\\Hunter\\Hunter-800004.pt"
+                ]
+            },
+            {
+                "steps": 953215,
+                "file_path": "results\\EnemyV8\\Hunter\\Hunter-953215.onnx",
+                "reward": null,
+                "creation_time": 1637101719.3969672,
+                "auxillary_file_paths": [
+                    "results\\EnemyV8\\Hunter\\Hunter-953215.pt"
+                ]
+            },
+            {
+                "steps": 999999,
+                "file_path": "results\\EnemyV8\\Hunter\\Hunter-999999.onnx",
+                "reward": null,
+                "creation_time": 1637102140.5667672,
+                "auxillary_file_paths": [
+                    "results\\EnemyV8\\Hunter\\Hunter-999999.pt"
+                ]
+            },
+            {
+                "steps": 1000255,
+                "file_path": "results\\EnemyV8\\Hunter\\Hunter-1000255.onnx",
+                "reward": null,
+                "creation_time": 1637102140.649788,
+                "auxillary_file_paths": [
+                    "results\\EnemyV8\\Hunter\\Hunter-1000255.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 500004,
+            "steps": 1000255,
             "file_path": "results\\EnemyV8\\Hunter.onnx",
             "reward": null,
-            "creation_time": 1636776348.5862803,
+            "creation_time": 1637102140.649788,
             "auxillary_file_paths": [
-                "results\\EnemyV8\\Hunter\\Hunter-500004.pt"
+                "results\\EnemyV8\\Hunter\\Hunter-1000255.pt"
             ]
         }
     },

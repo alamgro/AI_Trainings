@@ -7,32 +7,28 @@ public class DummyPlayer : MonoBehaviour
     [SerializeField] private Transform[] pos;
     private int index;
     [SerializeField] float speed;
+    private Rigidbody rb;
     
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         index = Random.Range(0, pos.Length);
-
+        transform.LookAt(pos[index].position);
     }
 
     void Update()
     {
         if (Vector3.Distance(transform.position, pos[index].position) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, pos[index].position, speed);
-
+            rb.velocity = transform.forward * speed;
+            transform.LookAt(pos[index].position);
         }
         else
-        index = Random.Range(0, pos.Length);
-
-    }
-
-    void Move()
-    {
-        print("Moviendo");
-        //index = Random.Range(0, pos.Length);
-        transform.position = Vector3.MoveTowards(transform.position, pos[index].position, speed);
-        print(pos.Length + " lenght");
-        print(index + " index");
+        {
+            index = Random.Range(0, pos.Length);
+            transform.LookAt(pos[index].position);
+            print("Cambio ");
+        }
     }
 }

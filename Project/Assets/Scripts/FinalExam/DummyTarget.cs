@@ -41,6 +41,13 @@ public class DummyTarget : MonoBehaviour
 
         }
     }
+    private void Update()
+    {
+        if(transform.position.y < 0f)
+        {
+            Move();
+        }
+    }
 
     public void Move()
     {
