@@ -42,7 +42,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6769828872207886814
 GameObject:
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 8
+    VectorObservationSize: 6
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_RaysPerDirection: 15
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
-  m_RayLength: 8
+  m_RayLength: 15
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 1011

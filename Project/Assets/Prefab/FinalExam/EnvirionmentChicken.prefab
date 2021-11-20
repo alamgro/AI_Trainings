@@ -531,8 +531,8 @@ Transform:
   - {fileID: 4463290651293539433}
   - {fileID: 4463290652018951925}
   - {fileID: 4463290651737037674}
-  - {fileID: 6918523325194886510}
   - {fileID: 6859149287765133401}
+  - {fileID: 6918523325194886510}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 4463290652018951931}
   - component: {fileID: 4463290652018951934}
   - component: {fileID: 1870062459}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerDummy
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ MonoBehaviour:
   - {fileID: 4463290651178567617}
   - {fileID: 4463290650813599742}
   - {fileID: 4463290651963858773}
-  speed: 1
+  speed: 4
 --- !u!54 &1870062459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -894,7 +894,7 @@ Transform:
   - {fileID: 3656623571691948764}
   - {fileID: 4301732917578125175}
   m_Father: {fileID: 4463290651417763549}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7884943006232598062
 GameObject:
@@ -1001,14 +1001,18 @@ PrefabInstance:
     - target: {fileID: 6657533146699328889, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 530ba4b78cb6f694a99936ce37aa01bf, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ba6c43280da8f374f9d3ec8a374d31ca, type: 3}
     - target: {fileID: 6657533146699328889, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: m_BehaviorType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6657533146699328889, guid: d364419225b183f45acb36032bdecac4, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6769828872207886810, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6769828872207886810, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,7 +1064,7 @@ PrefabInstance:
       objectReference: {fileID: 4463290652018951925}
     - target: {fileID: 6882923442229178162, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: agentSpeed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6882923442229178162, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: groundStart

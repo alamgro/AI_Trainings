@@ -28,7 +28,7 @@ public class DummyPlayer : MonoBehaviour
         {
             index = Random.Range(0, pos.Length);
             transform.LookAt(pos[index].position);
-            print("Cambio ");
+            //print("Cambio ");
         }
     }
 }

@@ -1607,6 +1607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agent_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1774628212177499777, guid: e8095128acf92794fb669eeeff28db95, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1774628212177499834, guid: e8095128acf92794fb669eeeff28db95, type: 3}
       propertyPath: m_RootOrder
       value: 5

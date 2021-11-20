@@ -32,7 +32,7 @@ behaviors:
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 900000
+    max_steps: 500000
     time_horizon: 64
     summary_freq: 10000
     threaded: false
@@ -54,11 +54,11 @@ engine_settings:
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: ChickenV6
+  run_id: ChickenV8
   initialize_from: null
   load_model: false
-  resume: true
-  force: false
+  resume: false
+  force: true
   train_model: false
   inference: false
   results_dir: results

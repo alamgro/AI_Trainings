@@ -1,0 +1,38 @@
+{
+    "Hunter": {
+        "checkpoints": [
+            {
+                "steps": 499968,
+                "file_path": "results\\ChickenV8\\Hunter\\Hunter-499968.onnx",
+                "reward": null,
+                "creation_time": 1637376761.831385,
+                "auxillary_file_paths": [
+                    "results\\ChickenV8\\Hunter\\Hunter-499968.pt"
+                ]
+            },
+            {
+                "steps": 500032,
+                "file_path": "results\\ChickenV8\\Hunter\\Hunter-500032.onnx",
+                "reward": null,
+                "creation_time": 1637376761.888397,
+                "auxillary_file_paths": [
+                    "results\\ChickenV8\\Hunter\\Hunter-500032.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500032,
+            "file_path": "results\\ChickenV8\\Hunter.onnx",
+            "reward": null,
+            "creation_time": 1637376761.888397,
+            "auxillary_file_paths": [
+                "results\\ChickenV8\\Hunter\\Hunter-500032.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.9.1+cu111"
+    }
+}

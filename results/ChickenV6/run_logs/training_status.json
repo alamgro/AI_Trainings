@@ -2,15 +2,6 @@
     "Hunter": {
         "checkpoints": [
             {
-                "steps": 499940,
-                "file_path": "results\\ChickenV6\\Hunter\\Hunter-499940.onnx",
-                "reward": 50.56999941915274,
-                "creation_time": 1637020415.0027542,
-                "auxillary_file_paths": [
-                    "results\\ChickenV6\\Hunter\\Hunter-499940.pt"
-                ]
-            },
-            {
                 "steps": 500004,
                 "file_path": "results\\ChickenV6\\Hunter\\Hunter-500004.onnx",
                 "reward": 50.56999941915274,
@@ -18,15 +9,51 @@
                 "auxillary_file_paths": [
                     "results\\ChickenV6\\Hunter\\Hunter-500004.pt"
                 ]
+            },
+            {
+                "steps": 500004,
+                "file_path": "results\\ChickenV6\\Hunter\\Hunter-500004.onnx",
+                "reward": null,
+                "creation_time": 1637122143.678683,
+                "auxillary_file_paths": [
+                    "results\\ChickenV6\\Hunter\\Hunter-500004.pt"
+                ]
+            },
+            {
+                "steps": 500004,
+                "file_path": "results\\ChickenV6\\Hunter\\Hunter-500004.onnx",
+                "reward": null,
+                "creation_time": 1637122171.2349799,
+                "auxillary_file_paths": [
+                    "results\\ChickenV6\\Hunter\\Hunter-500004.pt"
+                ]
+            },
+            {
+                "steps": 502308,
+                "file_path": "results\\ChickenV6\\Hunter\\Hunter-502308.onnx",
+                "reward": null,
+                "creation_time": 1637122218.3449903,
+                "auxillary_file_paths": [
+                    "results\\ChickenV6\\Hunter\\Hunter-502308.pt"
+                ]
+            },
+            {
+                "steps": 900013,
+                "file_path": "results\\ChickenV6\\Hunter\\Hunter-900013.onnx",
+                "reward": -10.0,
+                "creation_time": 1637124219.435477,
+                "auxillary_file_paths": [
+                    "results\\ChickenV6\\Hunter\\Hunter-900013.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 500004,
+            "steps": 900013,
             "file_path": "results\\ChickenV6\\Hunter.onnx",
-            "reward": 50.56999941915274,
-            "creation_time": 1637020415.063768,
+            "reward": -10.0,
+            "creation_time": 1637124219.435477,
             "auxillary_file_paths": [
-                "results\\ChickenV6\\Hunter\\Hunter-500004.pt"
+                "results\\ChickenV6\\Hunter\\Hunter-900013.pt"
             ]
         }
     },
