@@ -9,8 +9,8 @@ public class DummyTarget : MonoBehaviour
 
     private float randX;
     private float randZ;
-   // private float timer;
-   // [SerializeField] private float timerToMove;
+    // private float timer;
+    // [SerializeField] private float timerToMove;
 
     // Start is called before the first frame update
     /*void Start()
@@ -28,7 +28,11 @@ public class DummyTarget : MonoBehaviour
             timer = 0;
         }
     }*/
+    private void Start()
+    {
+            Move();
 
+    }
     private void OnCollisionEnter(Collision collision)
     {
         /*if(collision.gameObject.Equals(enemy))

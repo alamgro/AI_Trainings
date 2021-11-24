@@ -11,6 +11,8 @@ TagManager:
   - Robot
   - Ally
   - Enemy
+  - Collectable
+  - Ground
   layers:
   - Default
   - TransparentFX

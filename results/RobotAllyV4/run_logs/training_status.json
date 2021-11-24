@@ -1,0 +1,65 @@
+{
+    "Hunter": {
+        "checkpoints": [
+            {
+                "steps": 500047,
+                "file_path": "results\\RobotAllyV4\\Hunter\\Hunter-500047.onnx",
+                "reward": null,
+                "creation_time": 1637695164.56908,
+                "auxillary_file_paths": [
+                    "results\\RobotAllyV4\\Hunter\\Hunter-500047.pt"
+                ]
+            },
+            {
+                "steps": 773306,
+                "file_path": "results\\RobotAllyV4\\Hunter\\Hunter-773306.onnx",
+                "reward": null,
+                "creation_time": 1637698192.9282045,
+                "auxillary_file_paths": [
+                    "results\\RobotAllyV4\\Hunter\\Hunter-773306.pt"
+                ]
+            },
+            {
+                "steps": 999959,
+                "file_path": "results\\RobotAllyV4\\Hunter\\Hunter-999959.onnx",
+                "reward": 4387.299907013774,
+                "creation_time": 1637699570.0251265,
+                "auxillary_file_paths": [
+                    "results\\RobotAllyV4\\Hunter\\Hunter-999959.pt"
+                ]
+            },
+            {
+                "steps": 1000023,
+                "file_path": "results\\RobotAllyV4\\Hunter\\Hunter-1000023.onnx",
+                "reward": 4387.299907013774,
+                "creation_time": 1637699570.08714,
+                "auxillary_file_paths": [
+                    "results\\RobotAllyV4\\Hunter\\Hunter-1000023.pt"
+                ]
+            },
+            {
+                "steps": 1241250,
+                "file_path": "results\\RobotAllyV4\\Hunter\\Hunter-1241250.onnx",
+                "reward": null,
+                "creation_time": 1637702668.8415067,
+                "auxillary_file_paths": [
+                    "results\\RobotAllyV4\\Hunter\\Hunter-1241250.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1241250,
+            "file_path": "results\\RobotAllyV4\\Hunter.onnx",
+            "reward": null,
+            "creation_time": 1637702668.8415067,
+            "auxillary_file_paths": [
+                "results\\RobotAllyV4\\Hunter\\Hunter-1241250.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.9.1+cu111"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "Hunter": {
+        "checkpoints": [
+            {
+                "steps": 220440,
+                "file_path": "results\\RobotAlly\\Hunter\\Hunter-220440.onnx",
+                "reward": null,
+                "creation_time": 1637451835.4611056,
+                "auxillary_file_paths": [
+                    "results\\RobotAlly\\Hunter\\Hunter-220440.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 220440,
+            "file_path": "results\\RobotAlly\\Hunter.onnx",
+            "reward": null,
+            "creation_time": 1637451835.4611056,
+            "auxillary_file_paths": [
+                "results\\RobotAlly\\Hunter\\Hunter-220440.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.9.1+cu111"
+    }
+}
