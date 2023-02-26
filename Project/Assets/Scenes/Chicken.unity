@@ -1063,7 +1063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4463290651417763549, guid: 0202490bc146ac640a2eb48d49c7e6db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4463290651417763549, guid: 0202490bc146ac640a2eb48d49c7e6db, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1100,18 +1100,6 @@ PrefabInstance:
     - target: {fileID: 4463290651417763549, guid: 0202490bc146ac640a2eb48d49c7e6db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463290652018951934, guid: 0202490bc146ac640a2eb48d49c7e6db, type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031390247027628493, guid: 0202490bc146ac640a2eb48d49c7e6db, type: 3}
-      propertyPath: m_Model
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031390247027628493, guid: 0202490bc146ac640a2eb48d49c7e6db, type: 3}
-      propertyPath: m_BrainParameters.VectorObservationSize
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0202490bc146ac640a2eb48d49c7e6db, type: 3}

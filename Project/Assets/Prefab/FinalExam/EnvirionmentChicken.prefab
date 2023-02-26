@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 4463290651293539434}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Suelo
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -861,17 +861,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4463290651417763549}
     m_Modifications:
+    - target: {fileID: 3171725083387042363, guid: d364419225b183f45acb36032bdecac4, type: 3}
+      propertyPath: m_DetectableTags.Array.data[0]
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6657533146699328889, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: ba6c43280da8f374f9d3ec8a374d31ca, type: 3}
-    - target: {fileID: 6657533146699328889, guid: d364419225b183f45acb36032bdecac4, type: 3}
-      propertyPath: m_BehaviorType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6657533146699328889, guid: d364419225b183f45acb36032bdecac4, type: 3}
-      propertyPath: m_BrainParameters.VectorObservationSize
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6769828872207886810, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: m_RootOrder
@@ -925,10 +921,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4463290652018951925}
-    - target: {fileID: 6882923442229178162, guid: d364419225b183f45acb36032bdecac4, type: 3}
-      propertyPath: agentSpeed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6882923442229178162, guid: d364419225b183f45acb36032bdecac4, type: 3}
       propertyPath: groundStart
       value: 
@@ -994,6 +986,10 @@ PrefabInstance:
     - target: {fileID: 5624526067409490163, guid: 87bd703313cac9047a5e1fedf0273e29, type: 3}
       propertyPath: m_Name
       value: PlayerDummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5624526067409490169, guid: 87bd703313cac9047a5e1fedf0273e29, type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5624526067409490169, guid: 87bd703313cac9047a5e1fedf0273e29, type: 3}
       propertyPath: pos.Array.data[0]

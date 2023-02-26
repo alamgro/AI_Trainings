@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SensorName: Fall
   m_DetectableTags:
-  - Suelo
+  - Ground
   - Ally
   - Peligro
   m_RaysPerDirection: 10
